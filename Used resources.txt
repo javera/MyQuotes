@@ -1,0 +1,16 @@
+Libraries used:
+
+* Action Bar Sherlock
+* HoloEverywhere
+* DoneDiscard buttons
+* Abstract Coursor Loader
+* Croutons
+* ORMLite
+* TypefaceTextView
+* Butterknife
+* Android-Universal-Image-Loader 
+
+
+Resources used:
+
+* Action Bar Icons

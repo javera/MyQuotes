@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="input_wrapper">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginBottom">@dimen/activity_vertical_margin</item>
+        <item name="android:background">@drawable/form_field_bg_simple</item>
+        <item name="android:minHeight">@dimen/min_touchable_height</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:padding">0dp</item>
+    </style>
+    
+    <style name="input_wrapper2" parent="@style/input_wrapper">
+        <item name="android:background">@drawable/form_field_bg_simple_darker</item>
+    </style>
+    
+    
+
+    <style name="vertical_center_field">
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="image_label" parent="@style/vertical_center_field">
+        <item name="android:layout_margin">@dimen/form_margin</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="input_text" parent="@style/vertical_center_field">
+        <item name="android:layout_marginLeft">@dimen/form_margin</item>
+        <item name="android:layout_marginRight">@dimen/form_margin</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/form_font_size</item>
+    </style>
+
+    <style name="input_image_button">
+        <item name="android:layout_width">@dimen/min_touchable_height</item>
+        <item name="android:layout_height">@dimen/min_touchable_height</item>
+    </style>
+
+    <style name="input_button_with_image">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/button_with_image_font_size</item>
+    </style>
+    
+    <style name="fav_star_style" parent="@style/image_label"> 
+        <item name="android:layout_width">32dp</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:background">?selectableItemBackground</item>
+        <item name="android:button">@color/fav_btn_state_list</item>
+    </style>
+    
+    <style name="fav_star_style_small" parent="@style/image_label"> 
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:background">?selectableItemBackground</item>
+        <item name="android:button">@color/fav_btn_state_list</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    
+    <style name="tag_button" parent="@style/Holo.Button.Small.Light">
+        <item name="android:drawableRight">@drawable/ab_hl_navigation_cancel</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textSize">@dimen/tag_button_font_size</item>
+        <item name="android:paddingTop">@dimen/tag_button_paddingTop</item>
+        <item name="android:paddingLeft">@dimen/tag_button_paddingLeft</item>
+        <item name="android:paddingRight">@dimen/tag_button_paddingRight</item>
+        <item name="android:paddingBottom">@dimen/tag_button_paddingBottom</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/tag_button_layout_height</item>
+    </style>
+
+    
+    <style name="source_author_text">
+        <item name="android:layout_marginLeft">@dimen/form_margin</item>
+        <item name="android:layout_marginRight">@dimen/form_margin</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">@dimen/source_author_min_height</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/source_author_font_size</item>
+    </style>
+</resources>

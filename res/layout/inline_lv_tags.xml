@@ -1,0 +1,20 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <Button
+        android:id="@+id/button1"
+        android:text="love"
+        style="@style/tag_button" />
+
+    <Button
+        android:id="@+id/button2"
+        android:text="romantic"
+        style="@style/tag_button" />
+
+    <Button
+        android:id="@+id/button4"
+        style="@style/tag_button"
+        android:text="sad" />
+
+</LinearLayout>

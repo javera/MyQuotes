@@ -1,0 +1,25 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--
+         Base application theme, dependent on API level. This theme is replaced by AppBaseTheme from res/values-vXX/styles.xml 
+		on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="Holo.Theme.Light">        <!--
+             Theme customizations available in newer API levels can go in res/values-vXX/styles.xml, while 
+			customizations related to backward-compatibility can go here.
+        -->
+    </style>
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowBackground">@color/almost_white</item>
+        <item name="android:colorBackground">@color/almost_white</item>
+        <item name="windowActionBarOverlay">false</item>
+        <!-- for ActionBarSherlock -->
+    </style>
+    <color name="almost_white">#f4f4f4</color>
+    <style name="toggle_themed" parent="@style/AppBaseTheme">
+        <item name="android:buttonStyleToggle">@style/Holo.Button.Toggle.Light</item>
+        <item name="android:textOn"></item>
+        <item name="android:textOff"></item>
+    </style>
+</resources>

@@ -1,0 +1,18 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:layout_weight="1" >
+
+   <Button
+        android:id="@+id/actionbar_discard"
+        style="?attr/borderlessButtonStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:drawableLeft="@drawable/ab_hl_navigation_cancel"
+        android:drawablePadding="-32dp"
+        android:paddingLeft="32dp"
+        android:text="@string/discard" />
+   
+</FrameLayout>

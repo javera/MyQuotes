@@ -1,0 +1,7 @@
+TODO:
+
+    print unknown instead of blanks
+(V) cover image fix
+(V) action bar gb - new quote
+(V) not pressing add tag fix
+(V) adding tag to the front

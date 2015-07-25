@@ -1,0 +1,125 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myTags="http://schemas.android.com/apk/res/com.mjaworski.myQuotes"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin" >
+
+        <LinearLayout
+            android:id="@+id/quote_wrapper"
+            style="@style/input_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true" >
+
+            <ImageView
+                android:id="@+id/quote_icon_open"
+                style="@style/image_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/input_quote_hint"
+                android:src="@drawable/ic_blue_open_quote" />
+
+            <include layout="@layout/divider_forms" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_horizontal_margin" >
+
+                <com.mjaworski.myQuotes.Utils.TypefaceTextView
+                    android:id="@+id/quote_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:maxEms="20"
+                    android:textSize="@dimen/quote_display_quotation_font_size"
+                    android:textStyle="italic"
+                    myTags:typeface="Roboto-LightItalic.ttf" />
+
+                <LinearLayout
+                    android:id="@+id/quote_divider_wrapper"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/quote_text"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:weightSum="1.0" >
+                    <View
+                        android:id="@+id/quote_divider"
+                        android:layout_width="0dp"
+                        android:layout_height="2px"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/quote_divider" />
+                </LinearLayout>
+
+                <TextView
+                    android:textIsSelectable="true"
+                    android:id="@+id/quote_author"
+                    style="@style/source_author_text"
+                    android:layout_alignRight="@+id/quote_text"
+                    android:layout_below="@+id/quote_divider_wrapper"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:textIsSelectable="true"
+                    android:id="@+id/quote_source"
+                    style="@style/source_author_text"
+                    android:layout_alignRight="@+id/quote_text"
+                    android:layout_below="@+id/quote_author"
+                    android:layout_margin="0dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textStyle="italic" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/header"
+            style="@style/sectionHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/quote_wrapper"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="@string/tags_cover_heading" />
+
+        <LinearLayout
+            android:id="@+id/tags_display_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header"
+            android:layout_marginBottom="@dimen/form_margin"
+            android:orientation="horizontal" >
+            
+           <!-- Here add: LL {w:m_p;h:w_c;marBottom:8dp} inside inflate tag_display_template {marginR: 8dp; h:w_p; w:w_p -->
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/cover_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tags_display_wrapper"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:background="@drawable/image_border"
+            android:contentDescription="@string/input_image_hint"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/cover_template" >
+        </ImageView>
+    </RelativeLayout>
+
+</ScrollView>

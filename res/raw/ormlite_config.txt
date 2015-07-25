@@ -1,0 +1,131 @@
+#
+# generated on 2013/05/09 02:21:27
+#
+# --table-start--
+dataClass=com.mjaworski.myQuotes.DB.Model.Author
+tableName=author
+# --table-fields-start--
+# --field-start--
+fieldName=_id
+columnName=id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=name
+columnName=name
+uniqueIndexName=author_name_idx
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.mjaworski.myQuotes.DB.Model.Quote
+tableName=quote
+# --table-fields-start--
+# --field-start--
+fieldName=_id
+columnName=_id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=quotation
+columnName=quotation
+# --field-end--
+# --field-start--
+fieldName=from
+columnName=source_id
+foreign=true
+foreignAutoRefresh=true
+foreignAutoCreate=true
+# --field-end--
+# --field-start--
+fieldName=isFavourite
+columnName=is_fav
+indexName=quote_is_fav_idx
+# --field-end--
+# --field-start--
+fieldName=url
+# --field-end--
+# --field-start--
+fieldName=timeStampAdded
+dataPersister=DATE
+format=yyyy-MM-dd HH:mm:ss
+# --field-end--
+# --field-start--
+fieldName=timeStampModified
+columnName=timeStampModified
+dataPersister=DATE
+# --field-end--
+# --field-start--
+fieldName=isDeleted
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.mjaworski.myQuotes.DB.Model.QuoteTag
+tableName=quotetag
+# --table-fields-start--
+# --field-start--
+fieldName=id
+columnName=id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=quote
+columnName=quote_id
+foreign=true
+# --field-end--
+# --field-start--
+fieldName=tag
+columnName=tag_id
+foreign=true
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.mjaworski.myQuotes.DB.Model.Source
+tableName=source
+# --table-fields-start--
+# --field-start--
+fieldName=_id
+columnName=id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=sourceTitle
+columnName=sourceTitle
+uniqueCombo=true
+# --field-end--
+# --field-start--
+fieldName=imagePath
+# --field-end--
+# --field-start--
+fieldName=author
+columnName=author_id
+foreign=true
+uniqueCombo=true
+foreignAutoRefresh=true
+foreignAutoCreate=true
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.mjaworski.myQuotes.DB.Model.Tag
+tableName=tag
+# --table-fields-start--
+# --field-start--
+fieldName=id
+columnName=id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=tag
+columnName=tag
+uniqueIndexName=tag_tag_idx
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################

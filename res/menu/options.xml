@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/createnew"
+        android:icon="@drawable/ab_hl_content_new"
+        android:showAsAction="always"
+        android:title="@string/addquote"/>
+
+    <item
+        android:id="@+id/about"
+        android:icon="@drawable/ab_hl_action_about"
+        android:showAsAction="never"
+        android:title="@string/about"/>
+
+</menu>

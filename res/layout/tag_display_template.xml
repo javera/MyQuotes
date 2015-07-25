@@ -1,0 +1,6 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:fontFamily="sans-serif-condensed"
+    android:background="@drawable/form_field_bg_simple" 
+    android:padding="4dp"
+    android:textStyle="italic"
+    android:textSize="@dimen/tag_button_font_size"/>

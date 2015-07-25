@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myTags="http://schemas.android.com/apk/res/com.mjaworski.myQuotes"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+    <RelativeLayout
+        android:id="@+id/row_visible_part"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_selector_holo_light"
+        android:clickable="false"
+        android:orientation="horizontal"
+        android:padding="@dimen/item_row_padding" >
+        <!-- ListRow Left Thumbnail image -->
+        <ImageView
+            android:id="@+id/row_img"
+            android:layout_width="@dimen/item_row_cover_img"
+            android:layout_height="@dimen/item_row_cover_img"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/item_row_padding"
+            android:contentDescription="@string/cover"
+            android:padding="@dimen/small_margin"
+            android:src="@drawable/cover_template" />
+        <!-- Quote -->
+        <com.mjaworski.myQuotes.Utils.TypefaceTextView
+            android:id="@+id/row_quote_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/row_img"
+            android:layout_toLeftOf="@+id/row_favourite"
+            android:layout_toRightOf="@+id/row_img"
+            android:clickable="false"
+            android:focusable="false"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/item_row_quotation_font_size"
+            android:textStyle="italic"
+            myTags:typeface="Roboto-LightItalic.ttf" />
+        <!-- Author Name -->
+        <TextView
+            android:id="@+id/row_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/row_quote_text"
+            android:layout_marginTop="@dimen/item_row_padding"
+            android:layout_toRightOf="@+id/row_img"
+            android:clickable="false"
+            android:focusable="false"
+            android:textColor="#343434"
+            android:textSize="@dimen/item_row_rest_font_size"
+            android:textStyle="bold" />
+        <!-- Source -->
+        <TextView
+            android:id="@+id/row_source"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/row_author"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/row_img"
+            android:clickable="false"
+            android:focusable="false"
+            android:textColor="#343434"
+            android:textSize="@dimen/item_row_rest_font_size"
+            android:textStyle="italic" />
+        <!-- Rightend Modified date -->
+        <TextView
+            android:id="@+id/row_modified"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/row_source"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@+id/row_img"
+            android:clickable="false"
+            android:focusable="false"
+            android:textColor="@color/emphasis"
+            android:textSize="@dimen/item_row_date_font_size" />
+        <!-- Righthand favourite -->
+        <ToggleButton
+            android:id="@+id/row_favourite"
+            style="@style/toggle_themed"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/fav_btn_bg"
+            android:checked="false"
+            android:contentDescription="@string/input_favourite_hint"
+            android:focusable="false" />
+        <ImageView
+            android:id="@+id/caret_down"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignBottom="@+id/row_modified"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/expander_open_holo_light" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/row_hidden_part"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/item_row_toolbar_height"
+        android:layout_below="@+id/row_visible_part"
+        android:background="@drawable/image_bg"
+        android:padding="@dimen/small_margin"
+        android:visibility="gone" >
+        <ImageButton
+            android:id="@+id/row_hidden_delete"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/delete"
+            android:src="@drawable/ic_blue_delete" />
+        <ImageButton
+            android:id="@+id/row_hidden_edit"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/edit"
+            android:src="@drawable/ic_blue_edit" />
+        <ImageButton
+            android:id="@+id/row_hidden_share"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/share"
+            android:src="@drawable/ic_blue_share" />
+        <ImageButton
+            android:id="@+id/row_hidden_author"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/more_author"
+            android:src="@drawable/ic_blue_author" />
+        <ImageButton
+            android:id="@+id/row_hidden_book"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/more_title"
+            android:src="@drawable/ic_blue_book" />
+    </LinearLayout>
+</RelativeLayout>
